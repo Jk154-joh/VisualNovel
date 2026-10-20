@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dfiy457fsmgb"]
+
+[ext_resource type="Script" uid="uid://cmokphjxv0wej" path="res://button.gd" id="1_gjdyk"]
+
+[node name="Scene" type="Node2D" unique_id=149621959]
+rotation = -0.08439717
+
+[node name="Button" type="Button" parent="." unique_id=1624360837]
+offset_left = 247.61018
+offset_top = 157.43317
+offset_right = 319.61017
+offset_bottom = 188.43317
+rotation = 0.079895824
+scale = Vector2(2.8546815, 2.321062)
+text = "BABABA"
+script = ExtResource("1_gjdyk")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1498462105]
+position = Vector2(308.22446, 164.56816)
+rotation = -0.0013982399
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
