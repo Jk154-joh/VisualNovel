@@ -1,11 +1,12 @@
 extends Node2D 
 
-@export var Text: Array#int is ID and string is dialogue
 @export var Text_Displayer: Label
 @export var Option_1_Text: Label
 @export var Option_2_Text: Label
 
-@export var Dialogues: Array
+@export var Button_Press_Script: Node
+var Current_Scene: Dialogue_Class
+var Dialogues: Array
 
 @export var JSON_Path: String
 @export var JSON_Settings: JSON
@@ -24,16 +25,19 @@ func _InitDialogues(ID: int) -> void:
 				b.Dialogue_Option_2, 
 				b.Dialogue_Option_2_ID)
 				Dialogues.append(DC)
+
 func _ready() -> void:
 	_InitDialogues(0)
 	
 	for a: Dialogue_Class in Dialogues:
 		print(a.Dialogue_Answer)
 
-func _SetDialogue(ID: int) -> void:
+func SetDialogue(ID: int) -> void:
 	for d in Dialogues:
 		if d.ID == ID:
 			Text_Displayer.text = d.Dialogue_Answer
+			Button_Press_Script.Dialogue_class = Current_Scene 
+
 			Option_1_Text.text = d.Dialogue_Option_1
 			Option_2_Text.text = d.Dialogue_Option_2
 		else:

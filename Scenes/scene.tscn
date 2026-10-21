@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfiy457fsmgb"]
 
-[ext_resource type="Script" uid="uid://cmokphjxv0wej" path="res://button.gd" id="1_gjdyk"]
+[ext_resource type="Script" uid="uid://cmokphjxv0wej" path="res://Scripts/button.gd" id="1_gjdyk"]
 
 [node name="Scene" type="Node2D" unique_id=149621959]
 rotation = -0.08439717
