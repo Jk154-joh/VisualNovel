@@ -1,0 +1,17 @@
+{
+	"Example_Dialogue_Scene_When_Enterring_A_Room":
+	[
+		{
+			"ID": 1,
+			
+			"Character_Dialogue": "Hello",
+			"Character_That_Talks": "res://Sprites/Example_Character_Sprite",
+
+			"Dialogue_Option_1": "Hello 1",
+			"Dialogue_Option_1_ID": 2,
+
+			"Dialogue_Option_2": "Hello 2",
+			"Dialogue_Option_2_ID": 3,
+		}
+	]
+}

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bq2nfgju6anva" path="res://Scenes/Dialogues.gd" id="1_1q7jh"]
 [ext_resource type="Script" uid="uid://bo7wq7nentjad" path="res://ChangeScene.gd" id="1_hfq6d"]
 [ext_resource type="Texture2D" uid="uid://dv1dupra0luad" path="res://Sprites/Stickman.png" id="2_1q7jh"]
+[ext_resource type="JSON" path="res://Scripts/Dialogue_Scenes.json" id="2_rpckl"]
 [ext_resource type="Script" uid="uid://y28ylgs7xyvb" path="res://Scenes/Press_Dialogue_Option.gd" id="4_oaddq"]
 
 [node name="Talk_Scene" type="Node2D" unique_id=1257040936 node_paths=PackedStringArray("Text_Displayer", "Option_1_Text", "Option_2_Text")]
@@ -11,6 +12,8 @@ Text = [NodePath("Character_Dialogue_Script")]
 Text_Displayer = NodePath("Dialouge")
 Option_1_Text = NodePath("Option1Text/Option1Text")
 Option_2_Text = NodePath("Option2/Option2Text")
+JSON_Path = "res://Scripts/Dialogue_Scenes.json"
+JSON_Settings = ExtResource("2_rpckl")
 
 [node name="Back_Button" type="Button" parent="." unique_id=2013093420]
 offset_left = -576.0
@@ -47,6 +50,7 @@ autowrap_mode = 3
 [node name="Character_Dialogue_Script" type="Node2D" parent="." unique_id=1348164378]
 
 [node name="Option2" type="Button" parent="." unique_id=1387393826 node_paths=PackedStringArray("DialogueManager")]
+self_modulate = Color(0, 0, 0, 1)
 offset_left = -167.0
 offset_top = -162.0
 offset_right = 91.0
@@ -62,13 +66,13 @@ offset_right = 40.0
 offset_bottom = 23.0
 
 [node name="Option1Text" type="Button" parent="." unique_id=1102068137]
+self_modulate = Color(0, 0, 0, 1)
 offset_left = -168.0
 offset_top = -43.0
 offset_right = 90.0
 offset_bottom = 428.0
 scale = Vector2(2.7465053, 0.2158118)
 icon = ExtResource("2_1q7jh")
-script = ExtResource("4_oaddq")
 
 [node name="Option1Text" type="Label" parent="Option1Text" unique_id=2040263174]
 layout_mode = 0
